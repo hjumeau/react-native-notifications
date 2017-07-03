@@ -176,7 +176,7 @@ RCT_EXPORT_MODULE()
     NSString *tokenRepresentation = [deviceToken isKindOfClass:[NSString class]] ? deviceToken : [self deviceTokenToString:deviceToken];
     [[NSNotificationCenter defaultCenter] postNotificationName:RNNotificationsRegistered
                                                         object:self
-                                                      userInfo:@{@"deviceToken": tokenRepresentation];
+                                                      userInfo:@{@"deviceToken": tokenRepresentation}];
 }
 
 + (void)didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
